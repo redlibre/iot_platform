@@ -1,4 +1,4 @@
-##Dragino device
+##How connect Dragino device to IoT Redlibre
 
 In this section we will show how to connect a dragino ms14 to our system by Internet to get control over gpios remotely.
 
