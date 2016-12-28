@@ -22,7 +22,7 @@ char message_buff[100];
 
 #define TOPIC  "redlibre/iot/"USERNAME"/"IOTDEVICE"/"IOTUSERNAME"/iot/control/"
 #define STATUS "redlibre/iot/"USERNAME"/"IOTDEVICE"/"IOTUSERNAME"/status/"
-
+#define IOTID USERNAME"/"IOTDEVICE
 
 IPAddress server(190, 97, 169, 126);
 
@@ -82,7 +82,7 @@ void setup()
   pinMode(out6, OUTPUT);
   
 
-  if (client.connect(IOTDEVICE, IOTUSERNAME, IOTPASSWORD)) {
+  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
    client.publish(STATUS,"hello world - authenticated!!");
    client.subscribe(TOPIC);
   }
