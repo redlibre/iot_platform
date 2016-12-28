@@ -12,7 +12,7 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
  #define USERNAME "uuuuu"
 ```
 
-\#define IOTUSERNAME "xxxxxxx" means, the unique id give from our platform to your device, is automatic generated when you create a device first time
+`\#define IOTUSERNAME "xxxxxxx"` means, the unique id give from our platform to your device, is automatic generated when you create a device first time
 
 \#define IOTPASSWORD "yyyyyyy" means the password that you entered when created the device.
 
