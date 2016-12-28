@@ -10,11 +10,15 @@ int out6 = 6;
 
 char message_buff[100];
 
-
+////Please here paste info from "devinfo"//////////
 #define IOTUSERNAME "xxxxxxx"
 #define IOTPASSWORD "yyyyyyy"
 #define IOTDEVICE "zzzzzz"
 #define USERNAME "uuuuu"
+///////////////////////////////////////////////////
+
+
+////from here dont' modify anything///////////////////////////////////////////////
 
 #define TOPIC  "redlibre/iot/"USERNAME"/"IOTDEVICE"/"IOTUSERNAME"/iot/control/"
 #define STATUS "redlibre/iot/"USERNAME"/"IOTDEVICE"/"IOTUSERNAME"/status/"
