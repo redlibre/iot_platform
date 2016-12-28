@@ -21,4 +21,18 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 `#define USERNAME "uuuuu"` is your username
 
 
-- Third, upload the sketch.ino into dragino by IP using ide 1.6.7
+- Third, get the sketch from here and modify the part thats say
+
+```
+////Please here paste info from "devinfo"//////////
+#define IOTUSERNAME "xxxxxxx"
+#define IOTPASSWORD "yyyyyyy"
+#define IOTDEVICE "zzzzzz"
+#define USERNAME "uuuuu"
+///////////////////////////////////////////////////
+```
+
+with the info provided from devinfo web page
+
+
+upload the sketch.ino into dragino by IP using ide 1.6.7
