@@ -35,4 +35,5 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 with the info provided from devinfo web page
 
 :four: Upload the sketch.ino into dragino by IP using Arduino IDE 1.6.7, `PLEASE SELECT BOARD "Arduino YUN"`
+
 :five: Go to www.redlibre.cl, then iot platform, then click on "remote control" of the device desired and voila!
