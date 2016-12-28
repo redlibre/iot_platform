@@ -12,16 +12,13 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
  #define USERNAME "uuuuu"
 ```
 
-`\#define IOTUSERNAME "xxxxxxx"` means, the unique id give from our platform to your device, is automatic generated when you create a device first time
+`#define IOTUSERNAME "xxxxxxx"` means, the unique id give from our platform to your device, is automatic generated when you create a device first time
 
-\#define IOTPASSWORD "yyyyyyy" means the password that you entered when created the device.
+`#define IOTPASSWORD "yyyyyyy"` means the password that you entered when created the device.
 
-\#define IOTDEVICE "zzzzzz" means the name that you entered when created the device.
+`#define IOTDEVICE "zzzzzz"` means the name that you entered when created the device.
 
-\#define USERNAME "uuuuu" is your username
-
-
-
+`#define USERNAME "uuuuu"` is your username
 
 
 - Third, upload the sketch.ino into dragino by IP using ide 1.6.7
