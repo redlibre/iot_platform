@@ -35,4 +35,4 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 with the info provided from devinfo web page
 
 
-upload the sketch.ino into dragino by IP using ide 1.6.7
+- Fourth, upload the sketch.ino into dragino by IP using Arduino IDE 1.6.7, PLEASE SELECT BOARD "Arduino YUN"
