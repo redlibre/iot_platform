@@ -36,3 +36,4 @@ with the info provided from devinfo web page
 
 
 - Fourth, upload the sketch.ino into dragino by IP using Arduino IDE 1.6.7, PLEASE SELECT BOARD "Arduino YUN"
+- Fifth, go to www.redlibre.cl, then iot platform, then click on "remote control" of the device desired and voila!
