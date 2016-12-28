@@ -2,9 +2,9 @@
 
 In this section we will show how to connect a dragino ms14 to our system by Internet to get control over gpios remotely.
 
-:one:, you must get internet access from you dragino device, please read the documentation from here http://wiki.dragino.com/index.php?title=Getting_Start_with_Arduino_Yun
+:one: You must get internet access from you dragino device, please read the documentation from here http://wiki.dragino.com/index.php?title=Getting_Start_with_Arduino_Yun
 
-- Second obtain the info from "devinfo" button on www.redlibre.cl, you will see the following
+:two: Obtain the info from "devinfo" button on www.redlibre.cl, you will see the following
 ```
  #define IOTUSERNAME "xxxxxxx"
  #define IOTPASSWORD "yyyyyyy"
@@ -21,7 +21,7 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 `#define USERNAME "uuuuu"` is your username
 
 
-- Third, get the sketch from here https://github.com/redlibre/iot_platform/blob/master/dragino/sketch.ino and modify the part thats say
+:three: Get the sketch from here https://github.com/redlibre/iot_platform/blob/master/dragino/sketch.ino and modify the part thats say
 
 ```
 ////Please here paste info from "devinfo"//////////
@@ -34,6 +34,5 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 
 with the info provided from devinfo web page
 
-
-- Fourth, upload the sketch.ino into dragino by IP using Arduino IDE 1.6.7, `PLEASE SELECT BOARD "Arduino YUN"`
+:four: Upload the sketch.ino into dragino by IP using Arduino IDE 1.6.7, `PLEASE SELECT BOARD "Arduino YUN"`
 - Fifth, go to www.redlibre.cl, then iot platform, then click on "remote control" of the device desired and voila!
