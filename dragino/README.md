@@ -1,4 +1,4 @@
-##Dragino device :+1:
+##Dragino device
 
 In this section we will show how to connect a dragino ms14 to our system by Internet to get control over gpios remotely.
 
@@ -7,9 +7,9 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 - Second obtain the info from "devinfo" button on www.redlibre.cl, you will see the following
 
 \#define IOTUSERNAME "xxxxxxx"
-> #define IOTPASSWORD "yyyyyyy"
-> #define IOTDEVICE "zzzzzz"
-> #define USERNAME "uuuuu"
+\#define IOTPASSWORD "yyyyyyy"
+\#define IOTDEVICE "zzzzzz"
+\#define USERNAME "uuuuu"
 
 
 - Third, upload the sketch.ino into dragino by IP using ide 1.6.7
