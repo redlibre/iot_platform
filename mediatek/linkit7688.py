@@ -26,7 +26,7 @@ def on_connect(client, userdata, rc):
     print("\nConnected with result code " + str(rc) + "\n")
 
     client.subscribe("redlibre/iot/{0}/{1}/{2}/iot/control/".format(USERNAME,IOTDEVICE,IOTUSERNAME))  
-    print("Subscribed to homecontrol1")
+    print("Subscribed to redlibre")
 
 def on_message_iotrl(client, userdata, msg):
     print("\n\t* Linkit UPDATED ("+msg.topic+"): " + str(msg.payload))
