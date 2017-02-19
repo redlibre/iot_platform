@@ -86,6 +86,7 @@ void setup()
    client.publish(STATUS,"hello world - authenticated!!");
    client.subscribe(TOPIC);
   }
+  lastReconnectAttempt = 0;
 }
 
 
