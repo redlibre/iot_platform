@@ -10,12 +10,12 @@ int out6 = 6;
 
 char message_buff[100];
 
-////Please here paste info from "devinfo"//////////
-#define IOTUSERNAME "xxxxxxx"
-#define IOTPASSWORD "yyyyyyy"
-#define IOTDEVICE "zzzzzz"
-#define USERNAME "uuuuu"
-///////////////////////////////////////////////////
+////Please here paste info from "devinfo"////////////////
+#define IOTUSERNAME "ioioioioio"
+#define IOTPASSWORD "pppppppp"
+#define IOTDEVICE "iiiiiiiii"
+#define USERNAME "uuuuuuuu"
+/////////////////////////////////////////////////////////
 
 
 ////from here dont' modify anything///////////////////////////////////////////////
@@ -25,7 +25,6 @@ char message_buff[100];
 #define IOTID USERNAME"/"IOTDEVICE
 
 IPAddress server(190, 97, 169, 126);
-long lastReconnectAttempt = 0;
 
 
 void callback(char* topic, byte* payload, unsigned int length);
@@ -72,14 +71,7 @@ else if (msgString.equals("gpio6off")) {
  
 }
 
-boolean reconnect() {
-  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
-  client.publish(STATUS,"hello world - authenticated!!");
-  client.subscribe(TOPIC);
-  }
-  
-  return client.connected();
-}
+
 
 void setup()
 {
@@ -88,32 +80,16 @@ void setup()
   pinMode(out3, OUTPUT);
   pinMode(out4, OUTPUT);
   pinMode(out6, OUTPUT);
-  client.setCallback(callback);
-  lastReconnectAttempt = 0;
+  
 
-//if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
-//  client.publish(STATUS,"hello world - authenticated!!");
-//  client.subscribe(TOPIC);
-//  }
- 
+  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
+   client.publish(STATUS,"hello world - authenticated!!");
+   client.subscribe(TOPIC);
+  }
 }
-
 
 void loop()
 {
-  if (!client.connected()) {
-    long now = millis();
-    if (now - lastReconnectAttempt > 5000) {
-      lastReconnectAttempt = now;
-      // Attempt to reconnect
-      if (reconnect()) {
-        lastReconnectAttempt = 0;
-      }
-    }
-  } else {
-    // Client connected
-
-    client.loop();
-  }
-
+  client.loop();
 }
+
