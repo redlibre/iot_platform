@@ -71,24 +71,51 @@ else if (msgString.equals("gpio6off")) {
  
 }
 
+long lastReconnectAttempt = 0;
+
+boolean reconnect() {
+  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
+    
+    client.publish(STATUS,"hello - re-authenticated!!");
+     client.subscribe(TOPIC);
+  }
+  return client.connected();
+}
 
 
 void setup()
 {
   Bridge.begin();
+  client.setCallback(callback);
+  lastReconnectAttempt = 0;
+  
   pinMode(out2, OUTPUT);
   pinMode(out3, OUTPUT);
   pinMode(out4, OUTPUT);
   pinMode(out6, OUTPUT);
   
 
-  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
-   client.publish(STATUS,"hello world - authenticated!!");
-   client.subscribe(TOPIC);
-  }
+// if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
+//   client.publish(STATUS,"hello - authenticated!!");
+//   client.subscribe(TOPIC);
+//  }
 }
 
 void loop()
 {
-  client.loop();
+  if (!client.connected()) {
+    long now = millis();
+    if (now - lastReconnectAttempt > 5000) {
+      lastReconnectAttempt = now;
+      // Attempt to reconnect
+      if (reconnect()) {
+        lastReconnectAttempt = 0;
+      }
+    }
+  } else {
+    // Client connected
+
+    client.loop();
+  }
+
 }
