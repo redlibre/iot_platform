@@ -1,3 +1,14 @@
+//Hello!, this is a sketch to get remote control to your dragino device by bridge mode
+//The original source and Pubsubclient code comes from: 
+//https://github.com/knolleary/pubsubclient
+//this is a modified sketch from those repository
+//
+//Hola ! Este es un sketch de prueba para tomar control remoto de su dispositivo dragino en modo bridge
+//la libreria Pubsubclient.* y el codigo fuente proviene desde:
+//https://github.com/knolleary/pubsubclient
+//y este es un sketch modificado desde el repositorio origen y adaptado para funcionar con nuestra
+//plataforma ior.redlibre.cl
+
 #include <SPI.h>
 #include <PubSubClient.h>
 #include <YunClient.h>
