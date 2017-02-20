@@ -7,7 +7,7 @@
 //la libreria Pubsubclient.* y el codigo fuente proviene desde:
 //https://github.com/knolleary/pubsubclient
 //y este es un sketch modificado desde el repositorio origen y adaptado para funcionar con nuestra
-//plataforma ior.redlibre.cl
+//plataforma iot.redlibre.cl
 
 //This sketch_reco.ino use a routine to reconnect to mqtt broker if the connection has gone
 
