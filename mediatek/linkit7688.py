@@ -1,3 +1,8 @@
+#Hello!, with this script you can get remote control of your linkit smart device using python and mqtt
+#
+#info@redlibre.cl
+#Santiago - Chile
+#
 import paho.mqtt.client as mqtt
 import json, time
 import mraa
