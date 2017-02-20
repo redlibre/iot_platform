@@ -9,6 +9,8 @@
 //y este es un sketch modificado desde el repositorio origen y adaptado para funcionar con nuestra
 //plataforma ior.redlibre.cl
 
+//This sketch_reco.ino use a routine to reconnect to mqtt broker if the connection has gone
+
 
 #include <SPI.h>
 #include <PubSubClient.h>
