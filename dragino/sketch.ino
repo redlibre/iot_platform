@@ -73,16 +73,6 @@ else if (msgString.equals("gpio6off")) {
 }
 
 boolean reconnect() {
-  if (client.connect("arduinoClient")) {
-    // Once connected, publish an announcement...
-    client.publish("outTopic","hello world");
-    // ... and resubscribe
-    client.subscribe("inTopic");
-  }
-  return client.connected();
-}
-
-boolean reconnect() {
   if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
   client.publish(STATUS,"hello world - authenticated!!");
   client.subscribe(TOPIC);
