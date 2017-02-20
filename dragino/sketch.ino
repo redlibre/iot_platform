@@ -88,7 +88,7 @@ void setup()
   pinMode(out3, OUTPUT);
   pinMode(out4, OUTPUT);
   pinMode(out6, OUTPUT);
-  
+  client.setCallback(callback);
   lastReconnectAttempt = 0;
 
 //if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
