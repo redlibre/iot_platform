@@ -7,7 +7,7 @@
 //la libreria Pubsubclient.* y el codigo fuente proviene desde:
 //https://github.com/knolleary/pubsubclient
 //y este es un sketch modificado desde el repositorio origen y adaptado para funcionar con nuestra
-//plataforma ior.redlibre.cl
+//plataforma iot.redlibre.cl
 
 #include <SPI.h>
 #include <PubSubClient.h>
