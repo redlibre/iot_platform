@@ -85,8 +85,9 @@ boolean reconnect() {
 
 void setup()
 {
-  Bridge.begin();
+  client.setServer(server, 1883);
   client.setCallback(callback);
+  Bridge.begin();
   lastReconnectAttempt = 0;
   
   pinMode(out2, OUTPUT);
