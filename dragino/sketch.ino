@@ -25,6 +25,7 @@ char message_buff[100];
 #define IOTID USERNAME"/"IOTDEVICE
 
 IPAddress server(190, 97, 169, 126);
+long lastReconnectAttempt = 0;
 
 
 void callback(char* topic, byte* payload, unsigned int length);
@@ -71,7 +72,24 @@ else if (msgString.equals("gpio6off")) {
  
 }
 
+boolean reconnect() {
+  if (client.connect("arduinoClient")) {
+    // Once connected, publish an announcement...
+    client.publish("outTopic","hello world");
+    // ... and resubscribe
+    client.subscribe("inTopic");
+  }
+  return client.connected();
+}
 
+boolean reconnect() {
+  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
+  client.publish(STATUS,"hello world - authenticated!!");
+  client.subscribe(TOPIC);
+  }
+  
+  return client.connected();
+}
 
 void setup()
 {
@@ -81,12 +99,13 @@ void setup()
   pinMode(out4, OUTPUT);
   pinMode(out6, OUTPUT);
   
-
-  if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
-   client.publish(STATUS,"hello world - authenticated!!");
-   client.subscribe(TOPIC);
-  }
   lastReconnectAttempt = 0;
+
+//if (client.connect(IOTID, IOTUSERNAME, IOTPASSWORD)) {
+//  client.publish(STATUS,"hello world - authenticated!!");
+//  client.subscribe(TOPIC);
+//  }
+ 
 }
 
 
