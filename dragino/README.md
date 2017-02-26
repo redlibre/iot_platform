@@ -21,7 +21,7 @@ In this section we will show how to connect a dragino ms14 to our system by Inte
 `#define USERNAME "uuuuu"` is your username
 
 
-:three: Get the sketch from here https://github.com/redlibre/iot_platform/blob/master/dragino/sketch.ino and modify the part thats say
+:three: Get the sketch from here https://github.com/redlibre/iot_platform/blob/master/dragino/sketch_reco.ino and modify the part thats say
 
 ```
 ////Please here paste info from "devinfo"//////////
