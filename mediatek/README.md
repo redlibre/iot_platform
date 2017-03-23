@@ -2,8 +2,10 @@ Hello!, with this script you can get remote control of your linkit smart device 
 
 First: update db list package inside openwrt linux
 
-opkg update
+> opkg update
 
 Second: install paho-mqtt libraries
+
+> pip install paho-mqtt
 
 
