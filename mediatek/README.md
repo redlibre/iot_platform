@@ -8,4 +8,5 @@ Second: install paho-mqtt libraries
 
 > pip install paho-mqtt
 
+Third: copy&paste script python code in your openwrt linkit linux, makes changes and execute script.
 
