@@ -1,12 +1,14 @@
 Hello!, with this script you can get remote control of your linkit smart device using python and mqtt
 
-First: update db list package inside openwrt linux
+one: update db list package inside openwrt linux
 
 > opkg update
 
-Second: install paho-mqtt libraries
+two: install paho-mqtt libraries
 
 > pip install paho-mqtt
 
-Third: copy&paste script python code in your openwrt linkit linux, makes changes and execute script.
+three: copy&paste script 
+
+> copy python code from https://github.com/redlibre/iot_platform/blob/master/mediatek/linkit7688.py in your openwrt linkit linux, makes changes and execute script.
 
