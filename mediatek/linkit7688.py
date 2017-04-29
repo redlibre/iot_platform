@@ -16,10 +16,10 @@ rele1.dir(mraa.DIR_OUT)
 rele2.dir(mraa.DIR_OUT)
 rele3.dir(mraa.DIR_OUT)
 
-
-# ----- CHANGE THESE FOR YOUR SETUP -----
 MQTT_HOST = "a.redlibre.cl"
 MQTT_PORT = 1883
+
+# ----- CHANGE THESE FOR YOUR SETUP -----
 USERNAME = "username"
 DEVPASSWORD = "devpassword"
 IOTUSERNAME = "iotusername"
